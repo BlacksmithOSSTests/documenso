@@ -13,7 +13,7 @@ jobs:
       matrix:
         os:
           - warp-ubuntu-latest-x64-4x
-          - warp-ubuntu-latest-arm64-4x
+          - blacksmith-4vcpu-ubuntu-2204-arm
 
     steps:
       - uses: actions/checkout@v4
@@ -63,7 +63,7 @@ jobs:
 
   create_and_publish_manifest:
     name: Create and publish manifest
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     needs: build_and_publish_platform_containers
     steps:
       - name: Checkout
