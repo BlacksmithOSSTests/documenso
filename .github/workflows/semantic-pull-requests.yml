@@ -14,7 +14,7 @@ permissions:
 jobs:
   validate-pr:
     name: Validate PR title
-    runs-on: blacksmith-4vcpu-ubuntu-2204
+    runs-on: ubuntu-latest
     steps:
       - name: Check PR creator's previous activity
         id: check_activity
